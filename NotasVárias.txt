@@ -1,0 +1,27 @@
+pasta vendor proveniente do composer
+dependência -- parecido a uma lib ou biblioteca. Código já feito
+
+INSTALAÇÃO VIA COMPOSER 
+# composer create-project laravel/laravel example-app
+
+INSTALAÇÃO DEPENDÊNCIA modulo de linguagem pt/br
+# composer require lucascudo/laravel-pt-br-localization --dev
+# php artisan vendor:publish --tag=laravel-pt-br-localization
+//composer para adicionar modulos dependencias
+
+//PROTEGER .env files
+.env .env.backup fazem sempre parte do gitignore
+
+# php artisan tinker para aceder a psy shell
+# echo env("APP_NAME") vai devolver o nome da app no ficheiro env // APP_NAME=Laravel
+ (-- GITHUB_API = "ASDASDASDADSAS")
+
+# php artisan serve para iniciar o servidor
+
+-----------------------------------------
+routes/web.php contém a rota da página index
+    Route::get('/', function ()  --> aqui está o caminho do url
+    return view('welcome'); 'welcome' refere se a welcome.blade.php, não precisa de .blade.php
+
+página index presente em resources/views/welcome.blade.php
+    
