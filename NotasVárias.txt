@@ -33,6 +33,7 @@ página index presente em resources/views/welcome.blade.php
 Controller classe pai
 Criar controller UsersController
 #php artisan make:controller UsersController
+
 Criar rota na web Route::get('/user/me', [UsersController::class, 'getMeProfile'])-> where('username','[a-zA-Z]+');
 esta rota usa /me em vez da var {username}, deve vir declarada primeiro do que a rota com a var username, senão
 /me vai ser interpretado como uma var
@@ -66,5 +67,8 @@ para usar ciclos ou estruturas de decisão no html , @if, @else, @endif, @foreac
 @unless, @endunless para executar sempre que condição não verdadeira, pode ser usado como um else do if
 @empty, @endempty , @isset, @endisset
 @for, @endfor, @while, @endwhile
+
+-----------------------------------------
+directiva @yield ('content','Ola aluno de laravel') , usar @extends('layout') no inicio
 
 

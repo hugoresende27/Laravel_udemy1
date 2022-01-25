@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     //return "testando";
     return view('welcome');
 });
-
+*/
 //wildcards nas rotas
 
 /*//MANEIRA 1 RETURN DA STRING
@@ -47,7 +48,7 @@ Route::get('/user/{username}', function (string $username) {
 })-> where('username','[a-zA-Z]+');
 */
 
-
+/*
 Route::get('/u/me', [UsersController::class, 'getMeProfile'])-> where('username','[a-zA-Z]+')->name('user-profile');
 Route::get('/user/{username}', [UsersController::class, 'getProfile'])-> where('username','[a-zA-Z]+');
 Route::get('/teste1', [UsersController::class, 'testeResponse']);
@@ -55,3 +56,11 @@ Route::get('/teste2', [UsersController::class, 'testeRedirect']);
 Route::get('/teste3', [UsersController::class, 'testeRoute']);
 Route::get('/teste4', [UsersController::class, 'testeRequest']);
 Route::get('/teste5', [UsersController::class, 'testeRequestB']);
+*/
+
+Route::get('/', [LandingController::class, 'getLandingPage']);
+Route::get('/about', [LandingController::class, 'getAboutPage']);
+
+
+
+
