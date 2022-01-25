@@ -48,10 +48,23 @@ dd=dump and die = var_dump + die
 Request pode ser usada a função validate para testar se string numeric etc
 
 -----------------------------------------
-# php artisan make:request TestRequest -- vai criar em app/Http/Requests/TestRequest.php
+# php artisan make:request TestRequest -- vai criar em app/Http/Requests/TestRequest.php um tipo de requisição com regras
+- metodo abstracto
 
 em TestRequest.php função authorize tem de dar testeRequest
 array de rules [ 'name' => 'required','age' => 'required']
 em UsersController.php public function testeRequestB(TestRequest $request)
+
+-----------------------------------------
+{{ $user }} == echo $user -- usa-se {{}} para echos 
+para usar ciclos ou estruturas de decisão no html , @if, @else, @endif, @foreach, @endforeach
+      @foreach($args as $a)
+        {{$a}}
+      @endforeach 
+@auth, @endauth, @guest, @endguest para verificações se logado
+
+@unless, @endunless para executar sempre que condição não verdadeira, pode ser usado como um else do if
+@empty, @endempty , @isset, @endisset
+@for, @endfor, @while, @endwhile
 
 

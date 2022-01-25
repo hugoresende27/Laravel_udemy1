@@ -17,7 +17,11 @@ class UsersController extends Controller
 
     public function getProfile(string $username)
     {
-        return view ("users", compact('username'));
+        $args = ['a' => ' '
+                ,'b',1,2,3];
+        $whilezada = true;
+        $chatters = ['valentim','lima','alisson','arnold','gabi','ramon','rita'];
+        return view ("users", compact(['username','args', 'whilezada','chatters']));
     }
 
     public function testeResponse()
