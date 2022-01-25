@@ -9,11 +9,13 @@
 <body>
 
     <marquee behavior="" direction="">
+        <h1>
         <?php
 
         echo $username;
 
         ?>
+        </h1>
     </marquee>
     
 </body>

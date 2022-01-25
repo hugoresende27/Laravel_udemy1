@@ -22,6 +22,36 @@ INSTALAÇÃO DEPENDÊNCIA modulo de linguagem pt/br
 routes/web.php contém a rota da página index
     Route::get('/', function ()  --> aqui está o caminho do url
     return view('welcome'); 'welcome' refere se a welcome.blade.php, não precisa de .blade.php
+função usando wildcards:
+Route::get('/user/{username}', function (string $username) {  
+    return view ("users", compact('username'));
+})-> where('username','[a-zA-Z]+');
 
 página index presente em resources/views/welcome.blade.php
+
+-----------------------------------------
+Controller classe pai
+Criar controller UsersController
+#php artisan make:controller UsersController
+Criar rota na web Route::get('/user/me', [UsersController::class, 'getMeProfile'])-> where('username','[a-zA-Z]+');
+esta rota usa /me em vez da var {username}, deve vir declarada primeiro do que a rota com a var username, senão
+/me vai ser interpretado como uma var
+
+-----------------------------------------
+criar uma alias para a rota (testeRoute)
+no fim da rota acrescentar ->name('alias-rota');
+na função route('user-profile', ['username' => 'HugoResende']) por exemplo
     
+-----------------------------------------
+class Request, pode ler dados da URL teste4?name=bros&age=22 (testeRequest)
+dd=dump and die = var_dump + die
+Request pode ser usada a função validate para testar se string numeric etc
+
+-----------------------------------------
+# php artisan make:request TestRequest -- vai criar em app/Http/Requests/TestRequest.php
+
+em TestRequest.php função authorize tem de dar testeRequest
+array de rules [ 'name' => 'required','age' => 'required']
+em UsersController.php public function testeRequestB(TestRequest $request)
+
+
