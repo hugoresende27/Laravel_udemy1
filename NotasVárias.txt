@@ -44,7 +44,8 @@ no fim da rota acrescentar ->name('alias-rota');
 na função route('user-profile', ['username' => 'HugoResende']) por exemplo
     
 -----------------------------------------
-class Request, pode ler dados da URL teste4?name=bros&age=22 (testeRequest)
+class Request, pode ler dados da URL teste4?name=bros&age=22 (testeRequest) 
+Request retorna um array
 dd=dump and die = var_dump + die
 Request pode ser usada a função validate para testar se string numeric etc
 
