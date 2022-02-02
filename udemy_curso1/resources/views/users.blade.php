@@ -44,6 +44,7 @@
 
     @unless ($username == "hugo")
         <p>UNLESS USERNAME SEJA "hugo" acontece isto</p>
+        <p>Como se fosse apenas um else de um if</p>
     @endunless
 
     @isset ($username)
@@ -65,14 +66,16 @@
         </tr>
     @endfor
 
+    <h3> whilezada:: {{$whilezada}} </h3>
+
     @while($whilezada)
-  {{--      {{dump ($whilezada)}} --}}
+  
         @if($whilezada)
             {{$whilezada = false}}
         @endif
 
     @endwhile
-
+    <h3> whilezada:: {{$whilezada}} </h3>
     @foreach($chatters as $key => $chatter)
         <tr>
             <td>{{$key. " ~~ ".$chatter}}</td>

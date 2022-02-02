@@ -58,6 +58,7 @@ Route::get('/teste4', [UsersController::class, 'testeRequest']);
 Route::get('/teste5', [UsersController::class, 'testeRequestB']);
 
 
+//Route::get('/',  [UsersController::class, 'testeResponse']);
 Route::get('/', [LandingController::class, 'getLandingPage']);
 Route::get('/about', [LandingController::class, 'getAboutPage']);
 
